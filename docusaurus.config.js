@@ -31,6 +31,20 @@ const config = {
     locales: ['pt-BR'],
   },
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['pt', 'en'],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: '/',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -57,11 +71,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Cartilha do Radioamador',
-        logo: {
-          alt: 'ANATEL Radioamador',
-          src: 'img/logo.svg',
-        },
+        title: '📡 Cartilha do Radioamador',
         items: [
           {
             type: 'docSidebar',
