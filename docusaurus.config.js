@@ -1,9 +1,4 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -16,13 +11,9 @@ const config = {
     v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://rodrigoreeis.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/radioamador-docs/',
 
-  // GitHub pages deployment config.
   organizationName: 'rodrigoreeis',
   projectName: 'radioamador-docs',
   deploymentBranch: 'gh-pages',
@@ -47,6 +38,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          // Serve docs direto na raiz: / em vez de /docs/
+          routeBasePath: '/',
         },
         blog: false,
         theme: {
@@ -66,36 +59,23 @@ const config = {
       navbar: {
         title: 'Cartilha do Radioamador',
         logo: {
-          alt: 'Radioamador Logo',
+          alt: 'ANATEL Radioamador',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'cartilhaSidebar',
+            sidebarId: 'mainSidebar',
             position: 'left',
-            label: 'Cartilha',
+            label: 'Documentação',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'tecnicaEticaSidebar',
-            position: 'left',
-            label: 'Técnica e Ética',
+            href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',
+            label: 'PDF Oficial',
+            position: 'right',
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'legislacaoSidebar',
-            position: 'left',
-            label: 'Legislação',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'eletronicaSidebar',
-            position: 'left',
-            label: 'Eletrônica',
-          },
-          {
-            href: 'https://github.com/radioamador-docs/radioamador-docs',
+            href: 'https://github.com/rodrigoreeis/radioamador-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -109,19 +89,19 @@ const config = {
             items: [
               {
                 label: 'Cartilha do Radioamador',
-                to: '/docs/cartilha/apresentacao',
+                to: '/cartilha/apresentacao',
               },
               {
                 label: 'Técnica e Ética Operacional',
-                to: '/docs/tecnica-etica/estacao-radioamador',
+                to: '/tecnica-etica/estacao-radioamador',
               },
               {
                 label: 'Legislação de Telecomunicações',
-                to: '/docs/legislacao/regulamento-radio-uit',
+                to: '/legislacao/regulamento-radio-uit',
               },
               {
                 label: 'Eletrônica e Eletricidade',
-                to: '/docs/eletronica/eletricidade-lei-ohm',
+                to: '/eletronica/eletricidade-lei-ohm',
               },
             ],
           },
@@ -129,19 +109,19 @@ const config = {
             title: 'Links Oficiais ANATEL',
             items: [
               {
-                label: 'ANATEL',
-                href: 'https://www.gov.br/anatel/pt-br',
+                label: 'PDF Oficial da Cartilha',
+                href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',
               },
               {
-                label: 'SEC - Sistema de Exames de Certificação',
+                label: 'SEC – Sistema de Exames de Certificação',
                 href: 'https://sistemas.anatel.gov.br/SEC/',
               },
               {
-                label: 'SEI - Sistema Eletrônico de Informações',
+                label: 'SEI – Sistema Eletrônico de Informações',
                 href: 'https://sei.anatel.gov.br/',
               },
               {
-                label: 'Consulta de Indicativos (SCRA)',
+                label: 'SCRA – Consulta de Indicativos',
                 href: 'https://sistemas.anatel.gov.br/SCRA/',
               },
             ],
@@ -150,8 +130,12 @@ const config = {
             title: 'Documentos Oficiais',
             items: [
               {
-                label: 'Resolução 772/2025',
-                href: 'https://informacoes.anatel.gov.br/legislacao/resolucoes/2025/1780-resolucao-772',
+                label: 'Ato nº 926/2024 (Requisitos Técnicos)',
+                href: 'https://informacoes.anatel.gov.br/legislacao/atos-de-requisitos-tecnicos-de-gestao-do-espectro/2024/1919-ato-926',
+              },
+              {
+                label: 'Resolução 777/2025 (RGST)',
+                href: 'https://informacoes.anatel.gov.br/legislacao/resolucoes/2025/2022-resolucao-777',
               },
               {
                 label: 'Lei 9.472/1997 (LGT)',
@@ -164,7 +148,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Cartilha do Serviço Radioamador - ANATEL. Versão 2026-04. Construído com Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Cartilha do Serviço Radioamador — ANATEL v2026-04. Construído com Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

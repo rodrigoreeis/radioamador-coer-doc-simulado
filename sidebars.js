@@ -2,15 +2,12 @@
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  cartilhaSidebar: [
-    'intro',
+  mainSidebar: [
     {
       type: 'category',
       label: 'Cartilha do Radioamador',
-      link: {
-        type: 'generated-index',
-        description: 'Guia rápido para quem quer entender o caminho para se tornar Radioamador no Brasil e operar de forma correta.',
-      },
+      collapsed: false,
+      link: { type: 'doc', id: 'cartilha/apresentacao' },
       items: [
         'cartilha/apresentacao',
         'cartilha/o-que-e-radioamador',
@@ -24,15 +21,13 @@ const sidebars = {
         'cartilha/preparando-exame',
       ],
     },
-  ],
-
-  tecnicaEticaSidebar: [
     {
       type: 'category',
       label: 'Técnica e Ética Operacional',
+      collapsed: true,
       link: {
         type: 'generated-index',
-        description: 'Material de apoio ao candidato na preparação do exame de radioamador - Técnica e Ética Operacional.',
+        description: 'Material de apoio ao candidato na preparação do exame — Técnica e Ética Operacional.',
       },
       items: [
         'tecnica-etica/estacao-radioamador',
@@ -45,15 +40,13 @@ const sidebars = {
         'tecnica-etica/emergencias',
       ],
     },
-  ],
-
-  legislacaoSidebar: [
     {
       type: 'category',
       label: 'Legislação de Telecomunicações',
+      collapsed: true,
       link: {
         type: 'generated-index',
-        description: 'Material de apoio ao candidato na preparação do exame de radioamador - Legislação de Telecomunicações.',
+        description: 'Material de apoio ao candidato na preparação do exame — Legislação de Telecomunicações.',
       },
       items: [
         'legislacao/regulamento-radio-uit',
@@ -70,15 +63,13 @@ const sidebars = {
         'legislacao/certificacao-homologacao',
       ],
     },
-  ],
-
-  eletronicaSidebar: [
     {
       type: 'category',
       label: 'Eletrônica e Eletricidade',
+      collapsed: true,
       link: {
         type: 'generated-index',
-        description: 'Material de apoio ao candidato na preparação do exame de radioamador - Conhecimentos de Eletrônica e Eletricidade.',
+        description: 'Material de apoio ao candidato na preparação do exame — Conhecimentos de Eletrônica e Eletricidade.',
       },
       items: [
         'eletronica/eletricidade-lei-ohm',

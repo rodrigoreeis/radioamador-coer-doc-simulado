@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 title: Apresentação
-slug: apresentacao
 ---
 
 # Seção 1 – Apresentação
