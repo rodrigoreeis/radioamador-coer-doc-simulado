@@ -211,7 +211,7 @@ Modos digitais desenvolvidos especificamente para HF, com **correção de erros*
 
 ---
 
-:::info Nota regulatória importante
+:::info[Nota regulatória importante]
 A ANATEL regula o **uso do espectro** de radiofrequências, não a tecnologia em si. Isso significa que:
 
 - O radioamador pode usar qualquer tecnologia digital que não viole as regras de uso do espectro (faixas, potências, identificação, não-codificação)

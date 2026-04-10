@@ -130,7 +130,7 @@ Em faixas específicas existem limites menores de e.i.r.p. (potência radiada is
 
 ---
 
-:::tip Onde conferir (Seção 5)
+:::tip[Onde conferir (Seção 5)]
 - **Ato nº 3.448/2026 (PPDUR)**: faixas e atribuições – [anatel.gov.br](https://www.gov.br/anatel/pt-br)
 - **Resolução 772/2025 (RGO)**: potências e condições de operação
 - **Plano de faixas IARU Região 2**: [iaru-r2.org](https://www.iaru-r2.org/)

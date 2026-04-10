@@ -80,7 +80,7 @@ Essa cultura é transmitida de geração em geração através dos clubes e asso
 
 ---
 
-:::tip Onde conferir (Seção 2)
+:::tip[Onde conferir (Seção 2)]
 - **Regulamento do Serviço de Radioamador (RGO)**: Resolução ANATEL nº 772/2025 – [informacoes.anatel.gov.br](https://informacoes.anatel.gov.br/legislacao)
 - **Regulamento de Rádio da UIT**: Artigo 25 – [itu.int](https://www.itu.int/pub/R-REG-RR)
 - **LABRE**: [labre.org.br](https://www.labre.org.br/)

@@ -62,9 +62,10 @@ Os principais documentos que embasam esta cartilha são:
 | Recomendação ITU-R M.1544-1 | [itu.int](https://www.itu.int/rec/R-REC-M.1544) |
 | Plano de Faixas IARU – Região 2 | [iaru-r2.org](https://www.iaru-r2.org/) |
 
+
 ---
 
-:::tip Onde conferir (Seção 1)
+:::tip[Onde conferir (Seção 1)]
 - **ANATEL**: [gov.br/anatel](https://www.gov.br/anatel/pt-br)
 - **Legislação completa**: [informacoes.anatel.gov.br/legislacao](https://informacoes.anatel.gov.br/legislacao)
 - **LGT**: [planalto.gov.br/ccivil_03/leis/l9472.htm](https://www.planalto.gov.br/ccivil_03/leis/l9472.htm)

@@ -79,7 +79,7 @@ Para manter sua situação regularizada com a ANATEL:
 
 ---
 
-:::tip Onde conferir (Seção 7)
+:::tip[Onde conferir (Seção 7)]
 - **LGT – Lei 9.472/1997** (sanções): [planalto.gov.br](https://www.planalto.gov.br/ccivil_03/leis/l9472.htm)
 - **Resolução 772/2025 (RGO)**: obrigações do radioamador
 - **SCRA – Consulta de regularidade**: [sistemas.anatel.gov.br/SCRA/](https://sistemas.anatel.gov.br/SCRA/)

@@ -81,7 +81,7 @@ O exame de radioamador é aplicado de forma **online, supervisionado remotamente
 - Verifique se não há programas ou extensões que possam bloquear o sistema de supervisão
 - Tenha seu documento de identidade físico em mãos para o processo de verificação
 
-:::warning Atenção
+:::warning[Atenção]
 Problemas técnicos durante a prova (queda de internet, câmera travando, etc.) podem resultar na anulação da prova. Verifique tudo com antecedência.
 :::
 
@@ -107,7 +107,7 @@ Após a realização do exame:
 
 ---
 
-:::tip Onde conferir (Seção 3)
+:::tip[Onde conferir (Seção 3)]
 - **SEC – Inscrição no exame**: [sistemas.anatel.gov.br/SEC/](https://sistemas.anatel.gov.br/SEC/)
 - **SEI – Processos ANATEL**: [sei.anatel.gov.br](https://sei.anatel.gov.br/)
 - **Conta gov.br**: [gov.br/pt-br/servicos/criar-sua-conta-gov.br](https://www.gov.br/pt-br/servicos/criar-sua-conta-gov.br)

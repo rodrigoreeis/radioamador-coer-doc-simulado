@@ -95,13 +95,13 @@ A licença de estação tem prazo de validade e precisa ser renovada. Além diss
 - **Indicativo especial**: se quiser usar um indicativo especial (eventos, expedições), solicite previamente via SEI
 - **Encerramento da estação**: informe à ANATEL se quiser encerrar a estação
 
-:::warning Atenção
+:::warning[Atenção]
 Transmitir com licença vencida é o mesmo que transmitir sem licença. Mantenha sua licença sempre renovada.
 :::
 
 ---
 
-:::tip Onde conferir (Seção 4)
+:::tip[Onde conferir (Seção 4)]
 - **SEI – Solicitação de licença**: [sei.anatel.gov.br](https://sei.anatel.gov.br/)
 - **SCRA – Consulta de licenças e indicativos**: [sistemas.anatel.gov.br/SCRA/](https://sistemas.anatel.gov.br/SCRA/)
 - **Resolução nº 772/2025 (RGO)**: regulamento completo do serviço de radioamador

@@ -71,7 +71,7 @@ O **Código Q**, especificamente, é um sistema de abreviações padronizado int
 
 ---
 
-:::tip Onde conferir (Seção 8)
+:::tip[Onde conferir (Seção 8)]
 - **Código Q completo**: [iaru.org](https://www.iaru.org/)
 - **SCRA – Consulta de indicativos**: [sistemas.anatel.gov.br/SCRA/](https://sistemas.anatel.gov.br/SCRA/)
 - **Resolução 772/2025**: definições oficiais do serviço de radioamador

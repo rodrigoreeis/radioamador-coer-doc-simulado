@@ -35,7 +35,7 @@ A **chave seletora** rotativa no multímetro seleciona a função e, em modelos 
 5. Conecte o multímetro no ponto aberto (em série)
 6. Ligue o circuito e leia o valor
 
-:::danger Cuidado crítico
+:::danger[Cuidado crítico]
 **NUNCA conecte o multímetro na função de corrente diretamente aos terminais de uma fonte de tensão** (em paralelo). O multímetro em modo corrente tem resistência muito baixa e será destruído instantaneamente pelo curto-circuito resultante. Sempre conecte em série!
 :::
 

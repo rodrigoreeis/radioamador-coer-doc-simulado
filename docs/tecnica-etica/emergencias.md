@@ -76,10 +76,10 @@ Se você está transmitindo a chamada de emergência (por si mesmo ou retransmit
 [O que é necessário]
 Cambio```
 
-:::danger Trotes de emergência
+:::danger[Trotes de emergência]
 Acionar falsamente serviços de emergência ou simular chamadas de socorro no rádio sem identificar que é um exercício é crime previsto no Código Penal (artigo 340 – falso alarme). Além das sanções administrativas da ANATEL, você pode responder criminalmente.
 :::
 
-:::tip Grupos de apoio à emergência
+:::tip[Grupos de apoio à emergência]
 Muitos clubes de radioamadores participam de grupos de comunicações emergenciais, como o GECA (Grupo de Emergência em Comunicações por Radioamadorismo) e grupos estaduais de defesa civil. Participar dessas atividades é uma forma de colocar o hobby a serviço da sociedade.
 :::

@@ -192,13 +192,13 @@ Para se preparar bem para o exame, use:
 - **Grupos online**: há grupos no Telegram, WhatsApp e fóruns onde radioamadores experientes auxiliam candidatos
 - **Livros técnicos**: o ARRL Handbook e publicações da LABRE são referências clássicas
 
-:::tip Dica de estudo
+:::tip[Dica de estudo]
 Não decore: entenda. As questões do exame testam compreensão, não memorização mecânica. Se você entender por que a Lei de Ohm funciona, você responderá a qualquer variação da pergunta. Se entender por que identificar a estação é obrigatório, você entenderá todas as regras derivadas desse princípio.
 :::
 
 ---
 
-:::info Links para estudar
+:::info[Links para estudar]
 - **SEC**: [sistemas.anatel.gov.br/SEC/](https://sistemas.anatel.gov.br/SEC/)
 - **LABRE**: [labre.org.br](https://www.labre.org.br/)
 - **Normas ANATEL**: [informacoes.anatel.gov.br/legislacao](https://informacoes.anatel.gov.br/legislacao)

@@ -121,7 +121,7 @@ Além disso, existem acordos de reciprocidade bilaterais com outros países que 
 
 ---
 
-:::tip Onde conferir (Seção 6)
+:::tip[Onde conferir (Seção 6)]
 - **Plano de faixas IARU R2**: [iaru-r2.org](https://www.iaru-r2.org/)
 - **SCRA – Consulta de repetidoras**: [sistemas.anatel.gov.br/SCRA/](https://sistemas.anatel.gov.br/SCRA/)
 - **SEI – Solicitação de IARP**: [sei.anatel.gov.br](https://sei.anatel.gov.br/)

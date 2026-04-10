@@ -54,7 +54,7 @@ Uma resistência de 100 Ω conectada a uma fonte de 12 V: qual é a corrente?
 
 `I = (V)/(R) = (12)/(100) = 0,12  A = 120  mA`
 
-:::tip Truque para memorizar
+:::tip[Truque para memorizar]
 Use o triângulo VIR: cubra a grandeza que quer calcular e as outras duas mostram a operação:
 - Cobrir V → V = R × I
 - Cobrir I → I = V/R
