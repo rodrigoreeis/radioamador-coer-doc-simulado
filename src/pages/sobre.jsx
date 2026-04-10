@@ -42,17 +42,26 @@ export default function Sobre() {
         </p>
 
         <h2>👨‍💻 Sobre mim</h2>
-        <p>
-          Sou <strong>engenheiro de software</strong>, com mais de 10 anos de experiência no mercado de tecnologia.
-          Este projeto foi desenvolvido com apoio de inteligência artificial, revisado manualmente por mim e validado
-          com base na cartilha oficial.
-        </p>
-        <p>
-          Também sou praticante de <strong>montanhismo</strong>, e foi justamente nas montanhas que surgiu meu
-          interesse pelo radioamadorismo. A necessidade de comunicação em locais remotos — muitas vezes sem sinal
-          convencional — despertou minha curiosidade e, desde então, venho me aprofundando cada vez mais nesse
-          universo.
-        </p>
+        <div className={styles.profile}>
+          <img
+            src="/radioamador-docs/img/rodrigo.jpeg"
+            alt="Rodrigo Reis"
+            className={styles.avatar}
+          />
+          <div>
+            <p>
+              Sou <strong>engenheiro de software</strong>, com mais de 10 anos de experiência no mercado de tecnologia.
+              Este projeto foi desenvolvido com apoio de inteligência artificial, revisado manualmente por mim e validado
+              com base na cartilha oficial.
+            </p>
+            <p>
+              Também sou praticante de <strong>montanhismo</strong>, e foi justamente nas montanhas que surgiu meu
+              interesse pelo radioamadorismo. A necessidade de comunicação em locais remotos — muitas vezes sem sinal
+              convencional — despertou minha curiosidade e, desde então, venho me aprofundando cada vez mais nesse
+              universo.
+            </p>
+          </div>
+        </div>
 
         <h2>🤝 Finalizando</h2>
         <p>
