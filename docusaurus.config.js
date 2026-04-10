@@ -82,7 +82,7 @@ const config = {
           {
             to: '/sobre',
             position: 'left',
-            label: 'Sobre',
+            label: 'Quem somos',
           },
           {
             href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',
