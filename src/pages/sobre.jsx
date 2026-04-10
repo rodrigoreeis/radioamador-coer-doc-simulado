@@ -9,7 +9,7 @@ export default function Sobre() {
       description="Saiba mais sobre a Cartilha Digital do Radioamador e quem está por trás deste projeto."
     >
       <main className={styles.page}>
-        <h1>📡 Quem somos</h1>
+        <h1>Quem somos</h1>
 
         <p>
           Esta cartilha digital foi organizada por <strong>Rodrigo Reis</strong>, com o objetivo de democratizar o
@@ -32,7 +32,7 @@ export default function Sobre() {
           . <strong>Este site não é oficial e não possui qualquer vínculo com a ANATEL.</strong>
         </p>
         <p>
-          👉 Em outras palavras: <strong>QSL?</strong> Se fizer sentido pra você, utilize como apoio nos seus estudos
+          Em outras palavras: <strong>QSL?</strong> Se fizer sentido pra você, utilize como apoio nos seus estudos
           — assim como fez para mim.
         </p>
         <p>
@@ -41,7 +41,7 @@ export default function Sobre() {
           no conteúdo da cartilha — uma forma prática de testar seus conhecimentos antes da prova.
         </p>
 
-        <h2>👨‍💻 Sobre mim</h2>
+        <h2>Sobre mim</h2>
         <div className={styles.profile}>
           <img
             src="/radioamador-docs/img/rodrigo.jpeg"
@@ -63,7 +63,7 @@ export default function Sobre() {
           </div>
         </div>
 
-        <h2>🤝 Finalizando</h2>
+        <h2>Finalizando</h2>
         <p>
           Se este material te ajudou de alguma forma, considere <strong>compartilhar com outras pessoas</strong> que
           também estão nessa jornada.
@@ -73,7 +73,7 @@ export default function Sobre() {
           contribuir com a comunidade e facilitar o acesso ao conhecimento.
         </p>
 
-        <h2>📬 Contato</h2>
+        <h2>Contato</h2>
         <p>
           <a href="mailto:br.rodrigoreis@gmail.com">br.rodrigoreis@gmail.com</a>
         </p>
