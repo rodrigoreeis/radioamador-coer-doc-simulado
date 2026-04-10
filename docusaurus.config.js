@@ -17,13 +17,13 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://radioamador-docs.github.io',
+  url: 'https://rodrigoreeis.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/radioamador-docs/',
 
   // GitHub pages deployment config.
-  organizationName: 'radioamador-docs',
+  organizationName: 'rodrigoreeis',
   projectName: 'radioamador-docs',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
