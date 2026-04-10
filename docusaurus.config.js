@@ -80,6 +80,11 @@ const config = {
             label: 'Documentação',
           },
           {
+            to: '/sobre',
+            position: 'left',
+            label: 'Sobre',
+          },
+          {
             href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',
             label: 'PDF Oficial',
             position: 'right',

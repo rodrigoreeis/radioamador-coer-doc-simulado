@@ -1,0 +1,91 @@
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.heroEmoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}
+
+.card {
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.35rem;
+  color: var(--ifm-color-primary);
+}
+
+.card p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.disclaimer {
+  background: var(--ifm-color-warning-contrast-background, #fff8e1);
+  border-left: 4px solid var(--ifm-color-warning, #f0ad4e);
+  border-radius: 0 8px 8px 0;
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+[data-theme='dark'] .disclaimer {
+  background: rgba(240, 173, 78, 0.1);
+}
+
+.qsl {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.contactCard {
+  text-align: center;
+}
+
+.contactCard h2 {
+  text-align: center;
+}
+
+.email {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.email:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
