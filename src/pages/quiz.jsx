@@ -370,29 +370,16 @@ export default function Quiz() {
       <Layout title="Quiz — Simulado COER" description="Simulado para o exame COER de radioamador">
         <div className={styles.page}>
           <div className={styles.startScreen}>
-            <div className={styles.startIcon}>📻</div>
             <h1 className={styles.startTitle}>Quiz — Simulado COER</h1>
             <p className={styles.startSubtitle}>
               Teste seus conhecimentos para o exame de certificação de operador de
               estação de radioamador.
             </p>
             <ul className={styles.startMeta}>
-              <li>
-                <span className={styles.metaIcon}>📋</span>
-                <strong>40 questões</strong> — 20 de Legislação + 20 de Técnica e Ética
-              </li>
-              <li>
-                <span className={styles.metaIcon}>⏱️</span>
-                <strong>Tempo total:</strong> 1 hora (60 minutos)
-              </li>
-              <li>
-                <span className={styles.metaIcon}>✅</span>
-                Ao final, veja o gabarito completo com explicações
-              </li>
-              <li>
-                <span className={styles.metaIcon}>🔀</span>
-                Navegue livremente entre as questões antes de encerrar
-              </li>
+              <li><strong>40 questões</strong> — 20 de Legislação + 20 de Técnica e Ética</li>
+              <li><strong>Tempo total:</strong> 1 hora (60 minutos)</li>
+              <li>Ao final, veja o gabarito completo com explicações</li>
+              <li>Navegue livremente entre as questões antes de encerrar</li>
             </ul>
             <button className={styles.startBtn} onClick={startQuiz}>
               Iniciar Quiz
@@ -411,7 +398,7 @@ export default function Quiz() {
           {/* Header */}
           <div className={styles.resultsHeader}>
             <button className={styles.retryBtn} onClick={startQuiz}>
-              ↺ Refazer Quiz
+              Refazer Quiz
             </button>
             <h2 className={styles.resultsTitle}>Resultado do Simulado</h2>
             <div className={styles.scoreBig}>
@@ -456,7 +443,7 @@ export default function Quiz() {
                         : styles.reviewStatusWrong
                     }
                   >
-                    {isUnanswered ? '—' : isCorrect ? '✓' : '✗'}
+                    {isUnanswered ? '—' : isCorrect ? 'Acerto' : 'Erro'}
                   </span>
                   <span className={styles.reviewQuestionNum}>Questão {i + 1}</span>
                   <span
@@ -501,7 +488,7 @@ export default function Quiz() {
 
           <div className={styles.retryRow}>
             <button className={styles.retryBtn} onClick={startQuiz}>
-              ↺ Refazer Quiz
+              Refazer Quiz
             </button>
           </div>
         </div>
@@ -518,7 +505,7 @@ export default function Quiz() {
         {/* Top bar */}
         <div className={styles.quizHeader}>
           <div className={isWarning ? `${styles.timer} ${styles.timerWarning}` : styles.timer}>
-            ⏱ {formatTime(timeLeft)}
+            {formatTime(timeLeft)}
           </div>
           <div className={styles.quizProgress}>
             Questão {currentIndex + 1} de {QUESTIONS.length}
@@ -577,7 +564,7 @@ export default function Quiz() {
             onClick={() => goTo(currentIndex - 1)}
             disabled={currentIndex === 0}
           >
-            ← Anterior
+            Anterior
           </button>
           <button
             className={styles.finishBtn}
@@ -590,7 +577,7 @@ export default function Quiz() {
             onClick={() => goTo(currentIndex + 1)}
             disabled={currentIndex === QUESTIONS.length - 1}
           >
-            Próxima →
+            Próxima
           </button>
         </div>
 
