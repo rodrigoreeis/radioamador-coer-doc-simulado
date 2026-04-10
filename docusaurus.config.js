@@ -158,7 +158,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Cartilha do Serviço Radioamador — ANATEL v2026-04. Construído com Docusaurus.`,
+        copyright: undefined,
       },
       prism: {
         theme: prismThemes.github,
