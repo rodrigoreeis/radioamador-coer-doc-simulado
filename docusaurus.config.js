@@ -86,12 +86,7 @@ const config = {
           },
           {
             href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',
-            label: 'PDF Oficial',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/rodrigoreeis/radioamador-docs',
-            label: 'GitHub',
+            label: 'Cartilha Oficial (Anatel)',
             position: 'right',
           },
         ],
