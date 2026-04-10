@@ -85,6 +85,11 @@ const config = {
             label: 'Quem somos',
           },
           {
+            to: '/quiz',
+            position: 'left',
+            label: 'Quiz',
+          },
+          {
             href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',
             label: 'Cartilha Oficial (Anatel)',
             position: 'right',
