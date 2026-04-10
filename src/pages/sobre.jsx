@@ -12,7 +12,11 @@ export default function Sobre() {
         <h1>Quem somos</h1>
 
         <p>
-          Esta cartilha digital foi organizada por <strong>Rodrigo Reis</strong>, com o objetivo de democratizar o
+          Esta cartilha digital foi organizada por{' '}
+          <a href="https://github.com/rodrigoreeis" target="_blank" rel="noopener noreferrer">
+            Rodrigo Reis
+          </a>
+          , com o objetivo de democratizar o
           acesso ao conteúdo e facilitar os estudos de quem está se preparando para a prova do COER (Classe C).
         </p>
         <p>

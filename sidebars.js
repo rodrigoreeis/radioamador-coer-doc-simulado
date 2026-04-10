@@ -65,6 +65,19 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Referência Rápida',
+      collapsed: false,
+      link: {
+        type: 'generated-index',
+        description: 'Código Q, Alfabeto Fonético e outras referências essenciais para o radioamador.',
+      },
+      items: [
+        'referencia/codigo-q',
+        'referencia/alfabeto-fonetico',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Eletrônica e Eletricidade',
       collapsed: true,
       link: {
