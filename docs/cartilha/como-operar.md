@@ -2,8 +2,9 @@
 sidebar_position: 6
 title: Como Operar Corretamente
 slug: como-operar
+description: >-
+  Aprenda os procedimentos corretos para operar uma estação de radioamador, incluindo identificação, uso de frequências e ética operacional.
 ---
-
 # Seção 6 – Como Operar Corretamente
 
 ## 6.1 Comece do jeito certo: operação responsável

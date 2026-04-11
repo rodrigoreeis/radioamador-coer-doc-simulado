@@ -2,8 +2,9 @@
 sidebar_position: 3
 title: Passo a Passo para se Tornar Radioamador
 slug: passo-a-passo
+description: >-
+  Guia completo com o passo a passo para obter a habilitação de radioamador no Brasil, incluindo o exame COER e o licenciamento na ANATEL.
 ---
-
 # Seção 3 – Passo a Passo para se Tornar Radioamador
 
 ## 3.1 O que você precisa antes de começar

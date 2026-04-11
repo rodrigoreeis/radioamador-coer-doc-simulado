@@ -2,8 +2,9 @@
 sidebar_position: 1
 title: Estação de Radioamador
 slug: estacao-radioamador
+description: >-
+  Conheça os componentes de uma estação de radioamador, equipamentos necessários, tipos de antenas e boas práticas de instalação.
 ---
-
 # Anexo 1, Seção 1 – Estação de Radioamador
 
 ## 1.1 Conjunto funcional da estação

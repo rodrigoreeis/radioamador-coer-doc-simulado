@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 title: Apresentação
+description: >-
+  Conheça a cartilha digital do radioamador, guia completo para a prova COER Classe C baseado na cartilha oficial da ANATEL.
 ---
-
 # Seção 1 – Apresentação
 
 ## 1.1 O que é esta cartilha

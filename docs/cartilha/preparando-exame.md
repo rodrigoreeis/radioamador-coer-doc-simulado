@@ -2,8 +2,9 @@
 sidebar_position: 10
 title: Preparando-se para o Exame
 slug: preparando-exame
+description: >-
+  Dicas e estratégias para se preparar para o exame COER de radioamador Classe C, com simulados e resumo dos conteúdos cobrados.
 ---
-
 # Seção 10 – Preparando-se para o Exame
 
 ## 10.1 Critérios de Aprovação por Classe

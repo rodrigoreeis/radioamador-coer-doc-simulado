@@ -2,8 +2,9 @@
 sidebar_position: 5
 title: Habilitação do Operador (COER) e Outorga
 slug: habilitacao-coer
+description: >-
+  Tudo sobre o exame COER, como funciona a certificação de operador de estação de radioamador no Brasil e como se inscrever pela ANATEL.
 ---
-
 # Habilitação do Operador (COER) e Outorga
 
 ## 3. Serviço de Radioamador: Estação, Licença e Tipos

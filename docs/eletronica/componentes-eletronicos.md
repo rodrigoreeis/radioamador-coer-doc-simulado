@@ -2,8 +2,9 @@
 sidebar_position: 2
 title: Componentes Eletrônicos e Propriedades dos Materiais
 slug: componentes-eletronicos
+description: >-
+  Conheça os principais componentes eletrônicos usados no radioamadorismo: resistores, capacitores, indutores, transistores e circuitos integrados.
 ---
-
 # Anexo 3, Seção 2 – Componentes Eletrônicos e Propriedades dos Materiais
 
 ## 2.1 Resistores: Função e Utilização

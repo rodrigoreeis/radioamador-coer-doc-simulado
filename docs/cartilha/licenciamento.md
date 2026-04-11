@@ -2,8 +2,9 @@
 sidebar_position: 4
 title: Licenciamento e Autorização de Estação
 slug: licenciamento
+description: >-
+  Saiba como licenciar sua estação de radioamador na ANATEL, requisitos, documentação e procedimentos necessários.
 ---
-
 # Seção 4 – Licenciamento e Autorização de Estação
 
 ## 4.1 Entenda a diferença: operador, serviço e estação

@@ -2,8 +2,9 @@
 sidebar_position: 4
 title: Legislação de Telecomunicações no Brasil
 slug: legislacao-brasil
+description: >-
+  Resumo da legislação brasileira de radioamador, incluindo a Lei Geral de Telecomunicações, resoluções da ANATEL e regulamentos vigentes.
 ---
-
 # Legislação de Telecomunicações no Brasil
 
 ## 1. Regiões de Indicativos no Brasil

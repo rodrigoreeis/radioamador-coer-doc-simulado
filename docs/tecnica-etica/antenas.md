@@ -2,8 +2,9 @@
 sidebar_position: 2
 title: Antenas
 slug: antenas
+description: >-
+  Guia completo sobre antenas para radioamador: dipolo, yagi, vertical, ganho, polarização e dicas de instalação segura.
 ---
-
 # Anexo 1, Seção 2 – Antenas
 
 ## 2.1 Função da antena e da linha

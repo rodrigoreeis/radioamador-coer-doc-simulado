@@ -21,8 +21,7 @@ export default function Sobre() {
         </p>
         <p>
           A proposta aqui é simples: tornar o aprendizado mais intuitivo. Diferente de um PDF tradicional com dezenas
-          de páginas, o conteúdo foi estruturado em formato navegável, permitindo consultas rápidas — quase um{' '}
-          <em>QTH do conhecimento</em>, onde você encontra exatamente o que precisa, quando precisa.
+          de páginas, o conteúdo foi estruturado em formato navegável, permitindo consultas rápidas onde você encontra exatamente o que precisa, quando precisa.
         </p>
         <p>
           Todo o material apresentado foi extraído da{' '}
@@ -34,10 +33,6 @@ export default function Sobre() {
             cartilha oficial da ANATEL
           </a>
           . <strong>Este site não é oficial e não possui qualquer vínculo com a ANATEL.</strong>
-        </p>
-        <p>
-          Em outras palavras: <strong>QSL?</strong> Se fizer sentido pra você, utilize como apoio nos seus estudos
-          — assim como fez para mim.
         </p>
         <p>
           O conteúdo será atualizado sempre que novas versões da cartilha oficial forem disponibilizadas. Além disso,
@@ -67,13 +62,12 @@ export default function Sobre() {
           </div>
         </div>
 
-        <h2>Finalizando</h2>
         <p>
           Se este material te ajudou de alguma forma, considere <strong>compartilhar com outras pessoas</strong> que
           também estão nessa jornada.
         </p>
         <p>
-          Este projeto é <strong>100% gratuito</strong> — sem <em>QRK</em> comercial, apenas com o objetivo de
+          Este projeto é <strong>100% gratuito</strong>, apenas com o objetivo de
           contribuir com a comunidade e facilitar o acesso ao conhecimento.
         </p>
 

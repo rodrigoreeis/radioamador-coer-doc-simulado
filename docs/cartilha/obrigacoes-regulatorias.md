@@ -2,8 +2,9 @@
 sidebar_position: 7
 title: Obrigações Regulatórias e Consequências
 slug: obrigacoes-regulatorias
+description: >-
+  Conheça as obrigações regulatórias dos operadores de radioamador no Brasil, normas da ANATEL e penalidades previstas em lei.
 ---
-
 # Seção 7 – Obrigações Regulatórias e Consequências
 
 ## 7.1 Responsabilidade do radioamador

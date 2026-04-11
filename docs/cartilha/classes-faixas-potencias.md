@@ -2,8 +2,9 @@
 sidebar_position: 5
 title: Classes, Faixas e Potências
 slug: classes-faixas-potencias
+description: >-
+  Entenda as classes de radioamador no Brasil, as faixas de frequência permitidas e os limites de potência para cada classe, incluindo a Classe C.
 ---
-
 # Seção 5 – Classes, Faixas e Potências
 
 ## 5.1 A regra principal: quem manda é a tabela oficial

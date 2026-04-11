@@ -2,8 +2,9 @@
 sidebar_position: 6
 title: Indicativos de Chamada
 slug: indicativos
+description: >-
+  Entenda o sistema de indicativos de chamada do radioamador brasileiro, prefixos PY, PP, PU e como solicitar seu indicativo na ANATEL.
 ---
-
 # Indicativos de Chamada
 
 ## 5. Indicativos de Chamada

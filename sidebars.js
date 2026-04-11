@@ -4,6 +4,11 @@
 const sidebars = {
   mainSidebar: [
     {
+      type: 'doc',
+      id: 'introducao/index',
+      label: 'Introdução',
+    },
+    {
       type: 'category',
       label: 'Cartilha do Radioamador',
       collapsed: false,

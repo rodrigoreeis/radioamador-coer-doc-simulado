@@ -2,8 +2,9 @@
 sidebar_position: 7
 title: Ética Operacional
 slug: etica-operacional
+description: >-
+  Aprenda as boas práticas e a ética operacional no radioamadorismo, procedimentos corretos no ar e como se relacionar com outros operadores.
 ---
-
 # Anexo 1, Seção 7 – Ética Operacional
 
 ## 7.1 Regra principal

@@ -2,8 +2,9 @@
 sidebar_position: 2
 title: O Que É Ser Radioamador no Brasil
 slug: o-que-e-radioamador
+description: >-
+  Entenda o que é radioamadorismo, como funciona o serviço no Brasil e o que é necessário para obter a licença de radioamador pela ANATEL.
 ---
-
 # Seção 2 – O Que É Ser Radioamador no Brasil
 
 ## 2.1 O que significa "ser radioamador", na prática

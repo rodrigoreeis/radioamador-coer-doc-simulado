@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Cartilha do Radioamador',
-  tagline: 'Guia completo do Serviço Radioamador no Brasil - ANATEL',
+  tagline: 'Guia completo para a prova COER — Radioamador Classe C no Brasil',
   favicon: 'img/favicon.svg',
 
   future: {
@@ -66,6 +66,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: 'description', content: 'Cartilha digital gratuita para a prova COER de radioamador Classe C no Brasil. Conteúdo baseado na cartilha oficial da ANATEL com simulado, legislação, eletrônica e técnica operacional.' },
+        { name: 'keywords', content: 'radioamador, COER, prova radioamador, exame radioamador, cartilha radioamador, ANATEL, licença radioamador, radioamador classe C, certificado radioamador, simulado COER, estudo radioamador, radioamador Brasil, habilitação radioamador, radioamadorismo' },
+        { property: 'og:title', content: 'Cartilha do Radioamador — Guia completo para a prova COER' },
+        { property: 'og:description', content: 'Material de estudo gratuito para a prova COER de radioamador Classe C. Conteúdo baseado na cartilha oficial da ANATEL, com simulado e referências.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:locale', content: 'pt_BR' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Cartilha do Radioamador — Guia COER Classe C' },
+        { name: 'twitter:description', content: 'Material de estudo gratuito para a prova COER de radioamador Classe C no Brasil.' },
+        { name: 'robots', content: 'index, follow' },
+      ],
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
@@ -80,14 +92,14 @@ const config = {
             label: 'Documentação',
           },
           {
-            to: '/sobre',
-            position: 'left',
-            label: 'Quem somos',
-          },
-          {
             to: '/quiz',
             position: 'left',
             label: 'Simulado',
+          },
+          {
+            to: '/apoio',
+            position: 'left',
+            label: 'Apoie 🤝',
           },
           {
             href: 'https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/6067372ab14ee1c9702eb7ff93f11323',

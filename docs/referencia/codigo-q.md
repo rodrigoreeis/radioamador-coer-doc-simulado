@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
 title: Código Q
+description: >-
+  Lista completa do Código Q para radioamador com significados em português: QRM, QSL, QRZ, QTH e todos os códigos essenciais.
 ---
-
 # Código Q
 
 O Código Q é um conjunto padronizado de abreviações de três letras, todas iniciadas com a letra **Q**, criado originalmente para comunicações via telégrafo. No radioamadorismo, esses códigos são amplamente usados tanto no CW (código Morse) quanto na fonia (voz), simplificando a comunicação e superando barreiras de idioma.

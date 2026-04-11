@@ -2,8 +2,9 @@
 sidebar_position: 1
 title: Conceitos Básicos de Eletricidade e Lei de Ohm
 slug: eletricidade-lei-ohm
+description: >-
+  Fundamentos de eletricidade para radioamador: Lei de Ohm, tensão, corrente, resistência e potência elétrica com exemplos práticos.
 ---
-
 # Anexo 3, Seção 1 – Conceitos Básicos de Eletricidade e Lei de Ohm
 
 ## 1.1 Grandezas Elétricas Fundamentais
