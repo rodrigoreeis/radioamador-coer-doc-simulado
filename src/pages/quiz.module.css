@@ -306,34 +306,61 @@
 .dots {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
   margin-bottom: 0.5rem;
 }
 
 .dot {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  background: var(--ifm-color-emphasis-200);
-  border: 2px solid var(--ifm-color-emphasis-300);
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: transform 0.1s, background 0.15s;
+  transition: transform 0.1s, opacity 0.15s;
   padding: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dot:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
+/* Cor base por tema */
+.dotLeg {
+  background: #0077b6;
+  border-color: #005f92;
+}
+
+.dotTec {
+  background: #7b2d8b;
+  border-color: #5e2070;
+}
+
+/* Não respondida: opaca */
+.dotLeg:not(.dotAnswered):not(.dotCurrent) {
+  opacity: 0.35;
+}
+
+.dotTec:not(.dotAnswered):not(.dotCurrent) {
+  opacity: 0.35;
+}
+
+/* Respondida: opacidade total (já é default) */
 .dotAnswered {
-  background: var(--ifm-color-primary-light);
-  border-color: var(--ifm-color-primary);
+  opacity: 1;
 }
 
+/* Atual: borda branca em destaque */
 .dotCurrent {
-  background: var(--ifm-color-primary);
-  border-color: var(--ifm-color-primary-dark);
-  transform: scale(1.25);
+  border-color: #fff;
+  opacity: 1;
+  transform: scale(1.2);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.25);
 }
 
 .dotsLegend {
@@ -358,19 +385,17 @@
   display: inline-block;
 }
 
-.legendDotGray {
-  background: var(--ifm-color-emphasis-200);
-  border: 1.5px solid var(--ifm-color-emphasis-300);
+.legendDotLeg {
+  background: #0077b6;
 }
 
-.legendDotBlue {
-  background: var(--ifm-color-primary-light);
-  border: 1.5px solid var(--ifm-color-primary);
+.legendDotTec {
+  background: #7b2d8b;
 }
 
-.legendDotCurrent {
-  background: var(--ifm-color-primary);
-  border: 1.5px solid var(--ifm-color-primary-dark);
+.legendDotFaded {
+  background: #0077b6;
+  opacity: 0.35;
 }
 
 /* ─── Results header ───────────────────────────────────────────────────────── */
