@@ -7,8 +7,9 @@ const TOTAL_TIME = 3600;
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E'];
 
-const ALL_LEGISLACAO = QUESTION_BANK.filter(q => q.category === 'Legislação');
-const ALL_TECNICA    = QUESTION_BANK.filter(q => q.category === 'Técnica e Ética');
+const ALL_LEGISLACAO  = QUESTION_BANK.filter(q => q.category === 'Legislação');
+const ALL_TECNICA     = QUESTION_BANK.filter(q => q.category === 'Técnica e Ética');
+const ALL_ELETRONICA  = QUESTION_BANK.filter(q => q.category === 'Eletrônica e Eletricidade');
 
 function shuffle(array) {
   const arr = [...array];
@@ -36,7 +37,7 @@ export default function Quiz() {
   const [phase, setPhase] = useState('start'); // 'start' | 'quiz' | 'results'
   const [currentIndex, setCurrentIndex] = useState(0);
   const [shuffled, setShuffled] = useState([]);
-  const [answers, setAnswers] = useState(Array(40).fill(null));
+  const [answers, setAnswers] = useState(Array(60).fill(null));
   const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
 
   useEffect(() => {
@@ -51,11 +52,12 @@ export default function Quiz() {
 
   function startQuiz() {
     const selected = [
-      ...shuffle(ALL_LEGISLACAO).slice(0, 20), // questões 1-20: Legislação
-      ...shuffle(ALL_TECNICA).slice(0, 20),    // questões 21-40: Técnica e Ética
+      ...shuffle(ALL_LEGISLACAO).slice(0, 20),  // questões 1-20: Legislação
+      ...shuffle(ALL_TECNICA).slice(0, 20),     // questões 21-40: Técnica e Ética
+      ...shuffle(ALL_ELETRONICA).slice(0, 20),  // questões 41-60: Eletrônica e Eletricidade
     ];
     setShuffled(selected);
-    setAnswers(Array(40).fill(null));
+    setAnswers(Array(60).fill(null));
     setTimeLeft(TOTAL_TIME);
     setCurrentIndex(0);
     setPhase('quiz');
@@ -77,6 +79,7 @@ export default function Quiz() {
   const q = shuffled[currentIndex];
 
   // Compute results (guard against empty shuffled during SSR)
+  const total = shuffled.length || 60;
   const score = shuffled.length === 0 ? 0 : answers.reduce(
     (acc, ans, i) => (i < shuffled.length && ans === shuffled[i].correct ? acc + 1 : acc), 0
   );
@@ -86,7 +89,10 @@ export default function Quiz() {
   const tecScore = shuffled.length === 0 ? 0 : answers.reduce(
     (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Técnica e Ética' && ans === shuffled[i].correct ? acc + 1 : acc, 0
   );
-  const pct = Math.round((score / 40) * 100);
+  const eletScore = shuffled.length === 0 ? 0 : answers.reduce(
+    (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Eletrônica e Eletricidade' && ans === shuffled[i].correct ? acc + 1 : acc, 0
+  );
+  const pct = Math.round((score / total) * 100);
 
   // ─── START SCREEN ────────────────────────────────────────────────────────────
   if (phase === 'start') {
@@ -100,7 +106,7 @@ export default function Quiz() {
               estação de radioamador.
             </p>
             <ul className={styles.startMeta}>
-              <li><strong>40 questões</strong> — 20 de Legislação + 20 de Técnica e Ética</li>
+              <li><strong>60 questões</strong> — 20 de Legislação + 20 de Técnica e Ética + 20 de Eletrônica e Eletricidade</li>
               <li><strong>Tempo total:</strong> 1 hora (60 minutos)</li>
               <li>Ao final, veja o gabarito completo com explicações</li>
               <li>Navegue livremente entre as questões antes de encerrar</li>
@@ -127,7 +133,7 @@ export default function Quiz() {
             <h2 className={styles.resultsTitle}>Resultado do Simulado</h2>
             <div className={styles.scoreBig}>
               <span className={styles.scoreNumber}>{score}</span>
-              <span className={styles.scoreTotal}> / 40</span>
+              <span className={styles.scoreTotal}> / 60</span>
               <span className={styles.scorePct}>{pct}%</span>
             </div>
             <div className={styles.categoryScores}>
@@ -143,6 +149,13 @@ export default function Quiz() {
                 <div className={styles.categoryScoreValue}>{tecScore} / 20</div>
                 <div className={styles.categoryScorePct}>
                   {Math.round((tecScore / 20) * 100)}%
+                </div>
+              </div>
+              <div className={styles.categoryScore}>
+                <div className={styles.categoryScoreLabel}>Eletrônica e Eletricidade</div>
+                <div className={styles.categoryScoreValue}>{eletScore} / 20</div>
+                <div className={styles.categoryScorePct}>
+                  {Math.round((eletScore / 20) * 100)}%
                 </div>
               </div>
             </div>
@@ -172,9 +185,9 @@ export default function Quiz() {
                   <span className={styles.reviewQuestionNum}>Questão {i + 1}</span>
                   <span
                     className={`${styles.categoryBadge} ${
-                      question.category === 'Legislação'
-                        ? styles.categoryBadgeLeg
-                        : styles.categoryBadgeTec
+                      question.category === 'Legislação' ? styles.categoryBadgeLeg
+                      : question.category === 'Técnica e Ética' ? styles.categoryBadgeTec
+                      : styles.categoryBadgeElet
                     }`}
                   >
                     {question.category}
@@ -251,9 +264,9 @@ export default function Quiz() {
         <div className={styles.questionCard}>
           <span
             className={`${styles.categoryBadge} ${
-              q.category === 'Legislação'
-                ? styles.categoryBadgeLeg
-                : styles.categoryBadgeTec
+              q.category === 'Legislação' ? styles.categoryBadgeLeg
+              : q.category === 'Técnica e Ética' ? styles.categoryBadgeTec
+              : styles.categoryBadgeElet
             }`}
           >
             {q.category}
@@ -311,12 +324,12 @@ export default function Quiz() {
         {/* Question dots */}
         <div className={styles.dots}>
           {shuffled.map((q, i) => {
-            const isLeg = q.category === 'Legislação';
             const answered = answers[i] !== null;
             const isCurrent = i === currentIndex;
             let dotClass = styles.dot;
-            if (isLeg) dotClass += ' ' + styles.dotLeg;
-            else dotClass += ' ' + styles.dotTec;
+            if (q.category === 'Legislação') dotClass += ' ' + styles.dotLeg;
+            else if (q.category === 'Técnica e Ética') dotClass += ' ' + styles.dotTec;
+            else dotClass += ' ' + styles.dotElet;
             if (answered) dotClass += ' ' + styles.dotAnswered;
             if (isCurrent) dotClass += ' ' + styles.dotCurrent;
             return (
@@ -337,6 +350,9 @@ export default function Quiz() {
           </span>
           <span className={styles.legendItem}>
             <span className={`${styles.legendDot} ${styles.legendDotTec}`} /> Técnica e Ética
+          </span>
+          <span className={styles.legendItem}>
+            <span className={`${styles.legendDot} ${styles.legendDotElet}`} /> Eletrônica e Eletricidade
           </span>
           <span className={styles.legendItem}>
             <span className={`${styles.legendDot} ${styles.legendDotFaded}`} /> Não respondida (opaca)

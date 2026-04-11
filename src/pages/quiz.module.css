@@ -184,6 +184,12 @@
   border: 1px solid #ce93d8;
 }
 
+.categoryBadgeElet {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #a5d6a7;
+}
+
 /* ─── Question text ────────────────────────────────────────────────────────── */
 .questionText {
   font-size: 1.1rem;
@@ -341,12 +347,21 @@
   border-color: #5e2070;
 }
 
+.dotElet {
+  background: #1a7a4a;
+  border-color: #145c37;
+}
+
 /* Não respondida: opaca */
 .dotLeg:not(.dotAnswered):not(.dotCurrent) {
   opacity: 0.35;
 }
 
 .dotTec:not(.dotAnswered):not(.dotCurrent) {
+  opacity: 0.35;
+}
+
+.dotElet:not(.dotAnswered):not(.dotCurrent) {
   opacity: 0.35;
 }
 
@@ -391,6 +406,10 @@
 
 .legendDotTec {
   background: #7b2d8b;
+}
+
+.legendDotElet {
+  background: #1a7a4a;
 }
 
 .legendDotFaded {
