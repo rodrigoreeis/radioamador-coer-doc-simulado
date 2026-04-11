@@ -102,15 +102,44 @@ export default function Quiz() {
           <div className={styles.startScreen}>
             <h1 className={styles.startTitle}>Simulado COER</h1>
             <p className={styles.startSubtitle}>
-              Teste seus conhecimentos para o exame de certificação de operador de
-              estação de radioamador.
+              Teste seus conhecimentos para o exame de certificação de operador de estação de radioamador — Classe C.
             </p>
-            <ul className={styles.startMeta}>
-              <li><strong>60 questões</strong> — 20 de Legislação de Telecomunicações + 20 de Técnica e Ética Operacional + 20 de Eletrônica e Eletricidade</li>
-              <li><strong>Tempo total:</strong> 1 hora (60 minutos)</li>
-              <li>Ao final, veja o gabarito completo com explicações</li>
+
+            <div className={styles.startCards}>
+              <div className={styles.startCard}>
+                <div className={styles.startCardValue}>60</div>
+                <div className={styles.startCardLabel}>questões</div>
+              </div>
+              <div className={styles.startCard}>
+                <div className={styles.startCardValue}>60<span className={styles.startCardUnit}>min</span></div>
+                <div className={styles.startCardLabel}>tempo total</div>
+              </div>
+              <div className={styles.startCard}>
+                <div className={styles.startCardValue}>3</div>
+                <div className={styles.startCardLabel}>temas</div>
+              </div>
+            </div>
+
+            <div className={styles.startTopics}>
+              <div className={`${styles.startTopic} ${styles.startTopicLeg}`}>
+                <span className={styles.startTopicCount}>20</span>
+                <span className={styles.startTopicName}>Legislação de Telecomunicações</span>
+              </div>
+              <div className={`${styles.startTopic} ${styles.startTopicTec}`}>
+                <span className={styles.startTopicCount}>20</span>
+                <span className={styles.startTopicName}>Técnica e Ética Operacional</span>
+              </div>
+              <div className={`${styles.startTopic} ${styles.startTopicElet}`}>
+                <span className={styles.startTopicCount}>20</span>
+                <span className={styles.startTopicName}>Eletrônica e Eletricidade</span>
+              </div>
+            </div>
+
+            <ul className={styles.startInfo}>
               <li>Navegue livremente entre as questões antes de encerrar</li>
+              <li>Gabarito comentado disponível ao finalizar</li>
             </ul>
+
             <button className={styles.startBtn} onClick={startQuiz}>
               Iniciar Simulado
             </button>
@@ -168,20 +197,12 @@ export default function Quiz() {
             const userAnswer = answers[i];
             const isCorrect = userAnswer === question.correct;
             const isUnanswered = userAnswer === null;
+            const reviewCardClass = `${styles.questionReview} ${
+              isUnanswered ? '' : isCorrect ? styles.questionReviewCorrect : styles.questionReviewWrong
+            }`;
             return (
-              <div key={i} className={styles.questionReview}>
+              <div key={i} className={reviewCardClass}>
                 <div className={styles.reviewHeader}>
-                  <span
-                    className={
-                      isUnanswered
-                        ? styles.reviewStatusUnanswered
-                        : isCorrect
-                        ? styles.reviewStatusCorrect
-                        : styles.reviewStatusWrong
-                    }
-                  >
-                    {isUnanswered ? '—' : isCorrect ? 'Acerto' : 'Erro'}
-                  </span>
                   <span className={styles.reviewQuestionNum}>Questão {i + 1}</span>
                   <span
                     className={`${styles.categoryBadge} ${

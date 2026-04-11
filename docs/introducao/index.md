@@ -18,12 +18,12 @@ Todo o conteúdo é baseado integralmente na [Cartilha Oficial da ANATEL](https:
 
 ## O que você encontra aqui
 
-- 📖 **Cartilha do Radioamador** — todo o conteúdo da cartilha oficial organizado por temas
-- ⚡ **Técnica e Ética Operacional** — antenas, propagação, modulação, interferências e ética
-- ⚖️ **Legislação de Telecomunicações** — regulamentos, licenciamento, indicativos e faixas
-- 🔌 **Eletrônica e Eletricidade** — lei de Ohm, componentes, RF, eletromagnetismo e mais
-- 📋 **Referência rápida** — Código Q e Alfabeto Fonético sempre à mão
-- 🎯 **Simulado COER** — 60 questões distribuídas pelas três áreas da prova, com gabarito comentado
+- **Cartilha do Radioamador** — todo o conteúdo da cartilha oficial organizado por temas
+- **Técnica e Ética Operacional** — antenas, propagação, modulação, interferências e ética
+- **Legislação de Telecomunicações** — regulamentos, licenciamento, indicativos e faixas
+- **Eletrônica e Eletricidade** — lei de Ohm, componentes, RF, eletromagnetismo e mais
+- **Referência rápida** — Código Q e Alfabeto Fonético sempre à mão
+- **Simulado COER** — 60 questões distribuídas pelas três áreas da prova, com gabarito comentado
 
 ---
 
