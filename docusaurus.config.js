@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Cartilha do Radioamador',
   tagline: 'Guia completo do Serviço Radioamador no Brasil - ANATEL',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,

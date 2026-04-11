@@ -7,8 +7,8 @@ const TOTAL_TIME = 3600;
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E'];
 
-const ALL_LEGISLACAO  = QUESTION_BANK.filter(q => q.category === 'Legislação');
-const ALL_TECNICA     = QUESTION_BANK.filter(q => q.category === 'Técnica e Ética');
+const ALL_LEGISLACAO  = QUESTION_BANK.filter(q => q.category === 'Legislação de Telecomunicações');
+const ALL_TECNICA     = QUESTION_BANK.filter(q => q.category === 'Técnica e Ética Operacional');
 const ALL_ELETRONICA  = QUESTION_BANK.filter(q => q.category === 'Eletrônica e Eletricidade');
 
 function shuffle(array) {
@@ -52,8 +52,8 @@ export default function Quiz() {
 
   function startQuiz() {
     const selected = [
-      ...shuffle(ALL_LEGISLACAO).slice(0, 20),  // questões 1-20: Legislação
-      ...shuffle(ALL_TECNICA).slice(0, 20),     // questões 21-40: Técnica e Ética
+      ...shuffle(ALL_LEGISLACAO).slice(0, 20),  // questões 1-20: Legislação de Telecomunicações
+      ...shuffle(ALL_TECNICA).slice(0, 20),     // questões 21-40: Técnica e Ética Operacional
       ...shuffle(ALL_ELETRONICA).slice(0, 20),  // questões 41-60: Eletrônica e Eletricidade
     ];
     setShuffled(selected);
@@ -84,10 +84,10 @@ export default function Quiz() {
     (acc, ans, i) => (i < shuffled.length && ans === shuffled[i].correct ? acc + 1 : acc), 0
   );
   const legScore = shuffled.length === 0 ? 0 : answers.reduce(
-    (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Legislação' && ans === shuffled[i].correct ? acc + 1 : acc, 0
+    (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Legislação de Telecomunicações' && ans === shuffled[i].correct ? acc + 1 : acc, 0
   );
   const tecScore = shuffled.length === 0 ? 0 : answers.reduce(
-    (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Técnica e Ética' && ans === shuffled[i].correct ? acc + 1 : acc, 0
+    (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Técnica e Ética Operacional' && ans === shuffled[i].correct ? acc + 1 : acc, 0
   );
   const eletScore = shuffled.length === 0 ? 0 : answers.reduce(
     (acc, ans, i) => i < shuffled.length && shuffled[i].category === 'Eletrônica e Eletricidade' && ans === shuffled[i].correct ? acc + 1 : acc, 0
@@ -106,7 +106,7 @@ export default function Quiz() {
               estação de radioamador.
             </p>
             <ul className={styles.startMeta}>
-              <li><strong>60 questões</strong> — 20 de Legislação + 20 de Técnica e Ética + 20 de Eletrônica e Eletricidade</li>
+              <li><strong>60 questões</strong> — 20 de Legislação de Telecomunicações + 20 de Técnica e Ética Operacional + 20 de Eletrônica e Eletricidade</li>
               <li><strong>Tempo total:</strong> 1 hora (60 minutos)</li>
               <li>Ao final, veja o gabarito completo com explicações</li>
               <li>Navegue livremente entre as questões antes de encerrar</li>
@@ -138,14 +138,14 @@ export default function Quiz() {
             </div>
             <div className={styles.categoryScores}>
               <div className={styles.categoryScore}>
-                <div className={styles.categoryScoreLabel}>Legislação</div>
+                <div className={styles.categoryScoreLabel}>Legislação de Telecomunicações</div>
                 <div className={styles.categoryScoreValue}>{legScore} / 20</div>
                 <div className={styles.categoryScorePct}>
                   {Math.round((legScore / 20) * 100)}%
                 </div>
               </div>
               <div className={styles.categoryScore}>
-                <div className={styles.categoryScoreLabel}>Técnica e Ética</div>
+                <div className={styles.categoryScoreLabel}>Técnica e Ética Operacional</div>
                 <div className={styles.categoryScoreValue}>{tecScore} / 20</div>
                 <div className={styles.categoryScorePct}>
                   {Math.round((tecScore / 20) * 100)}%
@@ -185,8 +185,8 @@ export default function Quiz() {
                   <span className={styles.reviewQuestionNum}>Questão {i + 1}</span>
                   <span
                     className={`${styles.categoryBadge} ${
-                      question.category === 'Legislação' ? styles.categoryBadgeLeg
-                      : question.category === 'Técnica e Ética' ? styles.categoryBadgeTec
+                      question.category === 'Legislação de Telecomunicações' ? styles.categoryBadgeLeg
+                      : question.category === 'Técnica e Ética Operacional' ? styles.categoryBadgeTec
                       : styles.categoryBadgeElet
                     }`}
                   >
@@ -264,8 +264,8 @@ export default function Quiz() {
         <div className={styles.questionCard}>
           <span
             className={`${styles.categoryBadge} ${
-              q.category === 'Legislação' ? styles.categoryBadgeLeg
-              : q.category === 'Técnica e Ética' ? styles.categoryBadgeTec
+              q.category === 'Legislação de Telecomunicações' ? styles.categoryBadgeLeg
+              : q.category === 'Técnica e Ética Operacional' ? styles.categoryBadgeTec
               : styles.categoryBadgeElet
             }`}
           >
@@ -327,8 +327,8 @@ export default function Quiz() {
             const answered = answers[i] !== null;
             const isCurrent = i === currentIndex;
             let dotClass = styles.dot;
-            if (q.category === 'Legislação') dotClass += ' ' + styles.dotLeg;
-            else if (q.category === 'Técnica e Ética') dotClass += ' ' + styles.dotTec;
+            if (q.category === 'Legislação de Telecomunicações') dotClass += ' ' + styles.dotLeg;
+            else if (q.category === 'Técnica e Ética Operacional') dotClass += ' ' + styles.dotTec;
             else dotClass += ' ' + styles.dotElet;
             if (answered) dotClass += ' ' + styles.dotAnswered;
             if (isCurrent) dotClass += ' ' + styles.dotCurrent;
@@ -346,10 +346,10 @@ export default function Quiz() {
         </div>
         <div className={styles.dotsLegend}>
           <span className={styles.legendItem}>
-            <span className={`${styles.legendDot} ${styles.legendDotLeg}`} /> Legislação
+            <span className={`${styles.legendDot} ${styles.legendDotLeg}`} /> Legislação de Telecomunicações
           </span>
           <span className={styles.legendItem}>
-            <span className={`${styles.legendDot} ${styles.legendDotTec}`} /> Técnica e Ética
+            <span className={`${styles.legendDot} ${styles.legendDotTec}`} /> Técnica e Ética Operacional
           </span>
           <span className={styles.legendItem}>
             <span className={`${styles.legendDot} ${styles.legendDotElet}`} /> Eletrônica e Eletricidade
