@@ -505,7 +505,7 @@ export default function Quiz() {
         {/* Top bar */}
         <div className={styles.quizHeader}>
           <div className={isWarning ? `${styles.timer} ${styles.timerWarning}` : styles.timer}>
-            {formatTime(timeLeft)}
+            ⏱ {formatTime(timeLeft)}
           </div>
           <div className={styles.quizProgress}>
             Questão {currentIndex + 1} de {QUESTIONS.length}
@@ -575,7 +575,7 @@ export default function Quiz() {
           <button
             className={styles.navBtn}
             onClick={() => goTo(currentIndex + 1)}
-            disabled={currentIndex === QUESTIONS.length - 1}
+            disabled={currentIndex === QUESTIONS.length - 1 || answers[currentIndex] === null}
           >
             Próxima
           </button>
