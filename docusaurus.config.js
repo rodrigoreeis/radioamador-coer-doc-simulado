@@ -15,7 +15,7 @@ const config = {
   baseUrl: '/radioamador-coer-doc-simulado/',
 
   organizationName: 'rodrigoreeis',
-  projectName: 'radioamador-docs',
+  projectName: 'radioamador-coer-doc-simulado',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
