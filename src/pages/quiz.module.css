@@ -283,20 +283,23 @@
   cursor: not-allowed;
 }
 
-.finishBtn {
-  background: var(--ifm-color-emphasis-800);
+.deliverBtn {
+  background: linear-gradient(135deg, #f97316, #ef4444);
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 0.6rem 1.4rem;
-  font-size: 0.95rem;
-  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.15s;
+  letter-spacing: 0.02em;
+  box-shadow: 0 3px 12px rgba(249, 115, 22, 0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.finishBtn:hover {
-  background: var(--ifm-color-emphasis-900);
+.deliverBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(249, 115, 22, 0.5);
 }
 
 /* ─── Dots navigation ──────────────────────────────────────────────────────── */
@@ -660,7 +663,7 @@
   }
 
   .navBtn,
-  .finishBtn {
+  .deliverBtn {
     width: 100%;
     text-align: center;
   }

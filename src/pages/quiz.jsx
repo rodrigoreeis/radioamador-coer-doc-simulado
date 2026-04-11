@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import styles from './quiz.module.css';
+import { QUESTION_BANK } from '../data/quiz-questions';
 
 const TOTAL_TIME = 3600;
 
@@ -290,7 +291,17 @@ const QUESTIONS = [
   },
 ];
 
-const OPTION_LABELS = ['A', 'B', 'C', 'D'];
+const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E'];
+
+// Merge our hand-written questions with the repo bank, grouped by category
+const ALL_LEGISLACAO = [
+  ...QUESTIONS.filter(q => q.category === 'Legislação'),
+  ...QUESTION_BANK.filter(q => q.category === 'Legislação'),
+];
+const ALL_TECNICA = [
+  ...QUESTIONS.filter(q => q.category === 'Técnica e Ética'),
+  ...QUESTION_BANK.filter(q => q.category === 'Técnica e Ética'),
+];
 
 function shuffle(array) {
   const arr = [...array];
@@ -332,7 +343,11 @@ export default function Quiz() {
   }, [phase, timeLeft]);
 
   function startQuiz() {
-    setShuffled(shuffle(QUESTIONS));
+    const selected = [
+      ...shuffle(ALL_LEGISLACAO).slice(0, 20),
+      ...shuffle(ALL_TECNICA).slice(0, 20),
+    ];
+    setShuffled(shuffle(selected));
     setAnswers(Array(40).fill(null));
     setTimeLeft(TOTAL_TIME);
     setCurrentIndex(0);
@@ -577,19 +592,22 @@ export default function Quiz() {
           >
             Anterior
           </button>
-          <button
-            className={styles.finishBtn}
-            onClick={() => setPhase('results')}
-          >
-            Encerrar e ver resultado
-          </button>
-          <button
-            className={styles.navBtn}
-            onClick={() => goTo(currentIndex + 1)}
-            disabled={currentIndex === shuffled.length - 1 || answers[currentIndex] === null}
-          >
-            Próxima
-          </button>
+          {answeredCount === shuffled.length ? (
+            <button
+              className={styles.deliverBtn}
+              onClick={() => setPhase('results')}
+            >
+              Entregar Simulado
+            </button>
+          ) : (
+            <button
+              className={styles.navBtn}
+              onClick={() => goTo(currentIndex + 1)}
+              disabled={currentIndex === shuffled.length - 1 || answers[currentIndex] === null}
+            >
+              Próxima
+            </button>
+          )}
         </div>
 
         {/* Question dots */}
