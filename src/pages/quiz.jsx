@@ -292,6 +292,15 @@ const QUESTIONS = [
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D'];
 
+function shuffle(array) {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 function formatTime(seconds) {
   const m = Math.floor(seconds / 60).toString().padStart(2, '0');
   const s = (seconds % 60).toString().padStart(2, '0');
@@ -308,6 +317,7 @@ function getPerformanceMessage(pct) {
 export default function Quiz() {
   const [phase, setPhase] = useState('start'); // 'start' | 'quiz' | 'results'
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [shuffled, setShuffled] = useState(QUESTIONS);
   const [answers, setAnswers] = useState(Array(40).fill(null));
   const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
 
@@ -322,6 +332,7 @@ export default function Quiz() {
   }, [phase, timeLeft]);
 
   function startQuiz() {
+    setShuffled(shuffle(QUESTIONS));
     setAnswers(Array(40).fill(null));
     setTimeLeft(TOTAL_TIME);
     setCurrentIndex(0);
@@ -341,23 +352,23 @@ export default function Quiz() {
   }
 
   const answeredCount = answers.filter((a) => a !== null).length;
-  const q = QUESTIONS[currentIndex];
+  const q = shuffled[currentIndex];
 
   // Compute results
   const score = answers.reduce(
-    (acc, ans, i) => (ans === QUESTIONS[i].correct ? acc + 1 : acc),
+    (acc, ans, i) => (ans === shuffled[i].correct ? acc + 1 : acc),
     0
   );
   const legScore = answers.reduce(
     (acc, ans, i) =>
-      QUESTIONS[i].category === 'Legislação' && ans === QUESTIONS[i].correct
+      shuffled[i].category === 'Legislação' && ans === shuffled[i].correct
         ? acc + 1
         : acc,
     0
   );
   const tecScore = answers.reduce(
     (acc, ans, i) =>
-      QUESTIONS[i].category === 'Técnica e Ética' && ans === QUESTIONS[i].correct
+      shuffled[i].category === 'Técnica e Ética' && ans === shuffled[i].correct
         ? acc + 1
         : acc,
     0
@@ -367,10 +378,10 @@ export default function Quiz() {
   // ─── START SCREEN ────────────────────────────────────────────────────────────
   if (phase === 'start') {
     return (
-      <Layout title="Quiz — Simulado COER" description="Simulado para o exame COER de radioamador">
+      <Layout title="Simulado COER" description="Simulado para o exame COER de radioamador">
         <div className={styles.page}>
           <div className={styles.startScreen}>
-            <h1 className={styles.startTitle}>Quiz — Simulado COER</h1>
+            <h1 className={styles.startTitle}>Simulado COER</h1>
             <p className={styles.startSubtitle}>
               Teste seus conhecimentos para o exame de certificação de operador de
               estação de radioamador.
@@ -382,7 +393,7 @@ export default function Quiz() {
               <li>Navegue livremente entre as questões antes de encerrar</li>
             </ul>
             <button className={styles.startBtn} onClick={startQuiz}>
-              Iniciar Quiz
+              Iniciar Simulado
             </button>
           </div>
         </div>
@@ -398,7 +409,7 @@ export default function Quiz() {
           {/* Header */}
           <div className={styles.resultsHeader}>
             <button className={styles.retryBtn} onClick={startQuiz}>
-              Refazer Quiz
+              Refazer Simulado
             </button>
             <h2 className={styles.resultsTitle}>Resultado do Simulado</h2>
             <div className={styles.scoreBig}>
@@ -427,7 +438,7 @@ export default function Quiz() {
 
           {/* Question review */}
           <h3 className={styles.reviewSectionTitle}>Gabarito Comentado</h3>
-          {QUESTIONS.map((question, i) => {
+          {shuffled.map((question, i) => {
             const userAnswer = answers[i];
             const isCorrect = userAnswer === question.correct;
             const isUnanswered = userAnswer === null;
@@ -488,7 +499,7 @@ export default function Quiz() {
 
           <div className={styles.retryRow}>
             <button className={styles.retryBtn} onClick={startQuiz}>
-              Refazer Quiz
+              Refazer Simulado
             </button>
           </div>
         </div>
@@ -500,7 +511,7 @@ export default function Quiz() {
   const isWarning = timeLeft < 300; // < 5 minutes
 
   return (
-    <Layout title="Quiz — Simulado COER" description="Simulado COER em andamento">
+    <Layout title="Simulado COER" description="Simulado COER em andamento">
       <div className={styles.page}>
         {/* Top bar */}
         <div className={styles.quizHeader}>
@@ -508,10 +519,10 @@ export default function Quiz() {
             ⏱ {formatTime(timeLeft)}
           </div>
           <div className={styles.quizProgress}>
-            Questão {currentIndex + 1} de {QUESTIONS.length}
+            Questão {currentIndex + 1} de {shuffled.length}
           </div>
           <div className={styles.answeredCount}>
-            {answeredCount} / {QUESTIONS.length} respondidas
+            {answeredCount} / {shuffled.length} respondidas
           </div>
         </div>
 
@@ -519,7 +530,7 @@ export default function Quiz() {
         <div className={styles.progressBar}>
           <div
             className={styles.progressFill}
-            style={{ width: `${(answeredCount / QUESTIONS.length) * 100}%` }}
+            style={{ width: `${(answeredCount / shuffled.length) * 100}%` }}
           />
         </div>
 
@@ -575,7 +586,7 @@ export default function Quiz() {
           <button
             className={styles.navBtn}
             onClick={() => goTo(currentIndex + 1)}
-            disabled={currentIndex === QUESTIONS.length - 1 || answers[currentIndex] === null}
+            disabled={currentIndex === shuffled.length - 1 || answers[currentIndex] === null}
           >
             Próxima
           </button>
@@ -583,7 +594,7 @@ export default function Quiz() {
 
         {/* Question dots */}
         <div className={styles.dots}>
-          {QUESTIONS.map((_, i) => {
+          {shuffled.map((_, i) => {
             let dotClass = styles.dot;
             if (i === currentIndex) dotClass = `${dotClass} ${styles.dotCurrent}`;
             else if (answers[i] !== null) dotClass = `${dotClass} ${styles.dotAnswered}`;
