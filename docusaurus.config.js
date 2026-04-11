@@ -12,7 +12,7 @@ const config = {
   },
 
   url: 'https://rodrigoreeis.github.io',
-  baseUrl: '/radioamador-docs/',
+  baseUrl: '/radioamador-coer-doc-simulado/',
 
   organizationName: 'rodrigoreeis',
   projectName: 'radioamador-docs',
