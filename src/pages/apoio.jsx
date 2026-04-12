@@ -40,10 +40,10 @@ export default function Apoio() {
 
           <div className={styles.pixCard}>
             <div className={styles.qrPlaceholder}>
-              {/* QR Code será inserido aqui */}
               <div className={styles.qrBox}>
-                <span className={styles.qrLabel}>QR Code PIX</span>
-                <span className={styles.qrSub}>em breve</span>
+                <span className={styles.qrLabel}>
+                  <img src='img/pix.png'/>
+                </span>
               </div>
             </div>
 

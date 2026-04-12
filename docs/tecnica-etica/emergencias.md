@@ -70,11 +70,13 @@ Se você está transmitindo a chamada de emergência (por si mesmo ou retransmit
 - Treinos sem anunciar claramente que é um exercício
 
 **Formato básico de chamada de emergência:**
-```MAYDAY MAYDAY MAYDAY
+```
+MAYDAY MAYDAY MAYDAY
 [Seu indicativo] de [Localização]
 [Natureza da emergência]
 [O que é necessário]
-Cambio```
+Cambio
+```
 
 :::danger[Trotes de emergência]
 Acionar falsamente serviços de emergência ou simular chamadas de socorro no rádio sem identificar que é um exercício é crime previsto no Código Penal (artigo 340 – falso alarme). Além das sanções administrativas da ANATEL, você pode responder criminalmente.

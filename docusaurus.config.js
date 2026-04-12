@@ -78,7 +78,7 @@ const config = {
         { name: 'twitter:description', content: 'Material de estudo gratuito para a prova COER de radioamador Classe C no Brasil.' },
         { name: 'robots', content: 'index, follow' },
       ],
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/favicon.svg',
       colorMode: {
         respectPrefersColorScheme: true,
       },

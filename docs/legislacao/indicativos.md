@@ -14,9 +14,10 @@ description: >-
 O Brasil tem alocados pela UIT os blocos de indicativos **PPA–PYZ** e **ZVA–ZZZ** para uso no serviço de radioamador. A ANATEL atribui indicativos dentro desses blocos.
 
 **Estrutura do indicativo brasileiro:**
-```[Prefixo] + [Número regional] + [Sufixo]
+```
+[Prefixo] + [Número regional] + [Sufixo]
 Ex.: PY2XYZ → PY (prefixo Brasil) + 2 (região SP/GO/TO/DF) + XYZ (sufixo individual)```
-
+```
 **Escolha do indicativo:**
 É **facultado ao radioamador escolher** seu indicativo, dentro dos disponíveis na região. A escolha é feita no momento do licenciamento, mediante verificação de disponibilidade no SCRA (Sistema de Controle de Radioamadores da Anatel).
 

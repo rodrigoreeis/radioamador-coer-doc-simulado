@@ -375,9 +375,6 @@ export default function Quiz() {
           <span className={styles.legendItem}>
             <span className={`${styles.legendDot} ${styles.legendDotElet}`} /> Eletrônica e Eletricidade
           </span>
-          <span className={styles.legendItem}>
-            <span className={`${styles.legendDot} ${styles.legendDotFaded}`} /> Não respondida (opaca)
-          </span>
         </div>
       </div>
     </Layout>
